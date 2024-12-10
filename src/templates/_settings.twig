@@ -1,0 +1,106 @@
+{# @var plugin \diginaut\cookiebanner\CookieBanner #}
+{# @var settings \diginaut\cookiebanner\models\Settings #}
+{% import '_includes/forms.twig' as forms %}
+<div class="settings-content">
+    <div class="settings-group">
+        <h2>Content</h2>
+        <div class="flex-fields">
+            <div class="field width-100">
+                {{ forms.textField({
+                    label: 'Title'|t('_craft-cookie-banner'),
+                    instructions: 'Set the title for the banner.'|t('_craft-cookie-banner'),
+                    name: 'bannerTitle',
+                    value: settings.bannerTitle
+                }) }}
+            </div>
+            <div class="field width-100">
+                {{ forms.textareaField({
+                    label: 'Text'|t('_craft-cookie-banner'),
+                    instructions: 'Set the text for the banner.'|t('_craft-cookie-banner'),
+                    name: 'bannerText',
+                    value: settings.bannerText,
+                    required: true
+                }) }}
+            </div>
+            <div class="field width-50">
+                {{ forms.textField({
+                    label: 'Cookie policy URL'|t('_craft-cookie-banner'),
+                    instructions: 'Set the cookie policy URL.'|t('_craft-cookie-banner'),
+                    name: 'policyUrl',
+                    value: settings.policyUrl,
+                    required: true
+                }) }}
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="settings-group">
+        <h2>Layout</h2>
+        <p></p>
+        <div class="flex-fields">
+            <div class="field width-25">
+                {{ forms.colorField({
+                    label: 'Background color'|t('_craft-cookie-banner'),
+                    instructions: 'Set the color of the background of the banner.'|t('_craft-cookie-banner'),
+                    name: 'colorBlack',
+                    value: settings.colorBlack,
+                    required: true
+                }) }}
+            </div>
+            <div class="field width-25">
+                {{ forms.colorField({
+                    label: 'Title and main text color'|t('_craft-cookie-banner'),
+                    instructions: 'Set the color of the text displayed within the banner.'|t('_craft-cookie-banner'),
+                    name: 'colorWhite',
+                    value: settings.colorWhite,
+                    required: true
+                }) }}
+            </div>
+            <div class="field width-25">
+                {{ forms.colorField({
+                    label: 'Buttons color'|t('_craft-cookie-banner'),
+                    instructions: 'Set the color of the text displayed within the banner.'|t('_craft-cookie-banner'),
+                    name: 'colorPrimary',
+                    value: settings.colorPrimary,
+                    required: true
+                }) }}
+            </div>
+            <div class="field width-25">
+                {{ forms.colorField({
+                    label: 'Hover color'|t('_craft-cookie-banner'),
+                    instructions: 'Set the color of the text displayed within the banner.'|t('_craft-cookie-banner'),
+                    name: 'colorPrimaryHover',
+                    value: settings.colorPrimaryHover,
+                    required: true
+                }) }}
+            </div>
+            <div class="field width-25">
+                {{ forms.colorField({
+                    label: 'Tiny text color'|t('_craft-cookie-banner'),
+                    instructions: 'Set the color of the text displayed within the banner.'|t('_craft-cookie-banner'),
+                    name: 'colorTextTiny',
+                    value: settings.colorTextTiny,
+                    required: true
+                }) }}
+            </div>
+            <div class="field width-25">
+                {{ forms.colorField({
+                    label: 'Checkbox color'|t('_craft-cookie-banner'),
+                    instructions: 'Set the color of the text displayed within the banner.'|t('_craft-cookie-banner'),
+                    name: 'colorCheckbox',
+                    value: settings.colorCheckbox,
+                    required: true
+                }) }}
+            </div>
+            <div class="field width-25">
+                {{ forms.colorField({
+                    label: 'Active checkbox color'|t('_craft-cookie-banner'),
+                    instructions: 'Set the color of the text displayed within the banner.'|t('_craft-cookie-banner'),
+                    name: 'colorSuccess',
+                    value: settings.colorSuccess,
+                    required: true
+                }) }}
+            </div>
+        </div>
+    </div>
+</div>

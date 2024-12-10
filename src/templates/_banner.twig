@@ -1,0 +1,75 @@
+{# @var plugin \diginaut\cookiebanner\CookieBanner #}
+{# templates/_banner.twig #}
+<div data-diginaut-cb class="diginaut-cb">
+    <div class="diginaut-cb-modal">
+        <div class="diginaut-cb-content">
+            {% if settings.bannerTitle %}
+                <p class="diginaut-cb-title">{{ settings.bannerTitle|t|raw }}</p>
+            {% endif %}
+            {% if settings.bannerText %}
+                <p class="diginaut-cb-text">{{ settings.bannerText|t|raw }}</p>
+            {% endif %}
+            <div class="diginaut-cb-moreInfo">
+                <button data-diginaut-cb-collapse type="button">Voorkeuren bepalen</button>
+                {% if settings.policyUrl %}
+                    <a href="{{ settings.policyUrl }}" title="Meer info">Meer info</a>
+                {% endif %}
+            </div>
+        </div>
+        <div data-diginaut-cb-types class="diginaut-cb-types">
+            <ul class="diginaut-cb-typeList">
+                <li class="diginaut-cb-typeItem diginaut-cb-typeItem-required">
+                    <input data-diginaut-cb-option class="diginaut-cb-typeCheck" type="checkbox" name="cb-option" id="cb-option-essential" value="essential" checked required>
+                    <label class="diginaut-cb-typeInfo diginaut-cb-typeInfo-required" for="cb-option-essential">
+                        <strong class="diginaut-cb-typeName">Essentiële cookies</strong> 
+                        <span class="diginaut-cb-typeText">Cookies die noodzakelijk zijn voor de normale werking van deze website. Deze kunnen niet gedeactiveerd worden.</span>
+                    </label>
+                </li>
+                <li class="diginaut-cb-typeItem">
+                    <input data-diginaut-cb-option class="diginaut-cb-typeCheck" type="checkbox" name="cb-option" id="cb-option-functional" value="functional">
+                    <label class="diginaut-cb-typeInfo" for="cb-option-functional">
+                        <strong class="diginaut-cb-typeName">Functionele cookies</strong> 
+                        <span class="diginaut-cb-typeText">Cookies die de gebruiksvriendelijkheid van deze website verbeteren zoals bijvoorbeeld het bewaren van taalvoorkeuren.</span>
+                    </label>
+                </li>
+                <li class="diginaut-cb-typeItem">
+                    <input data-diginaut-cb-option class="diginaut-cb-typeCheck" type="checkbox" name="cb-option" id="cb-option-statistics" value="statistics">
+                    <label class="diginaut-cb-typeInfo" for="cb-option-statistics">
+                        <strong class="diginaut-cb-typeName">Statistische cookies</strong> 
+                        <span class="diginaut-cb-typeText">Cookies die gebruikt worden om analyses van surfgedrag op deze website mogelijk te maken zodat de website verbeterd kan worden.</span>
+                    </label>
+                </li>
+                <li class="diginaut-cb-typeItem">
+                    <input data-diginaut-cb-option class="diginaut-cb-typeCheck" type="checkbox" name="cb-option" id="cb-option-marketing" value="marketing">
+                    <label class="diginaut-cb-typeInfo" for="cb-option-marketing">
+                        <strong class="diginaut-cb-typeName">Marketing cookies</strong> 
+                        <span class="diginaut-cb-typeText">Cookies die het mogelijk maken om gepersonaliseerde advertenties weer te geven aan de hand van het surfgedrag op deze website.</span>
+                    </label>
+                </li>
+                <li class="diginaut-cb-typeItem">
+                    <input data-diginaut-cb-option class="diginaut-cb-typeCheck" type="checkbox" name="cb-option" id="cb-option-social" value="social">
+                    <label class="diginaut-cb-typeInfo" for="cb-option-social">
+                        <strong class="diginaut-cb-typeName">Social media cookies</strong> 
+                        <span class="diginaut-cb-typeText">Cookies die nodig voor de integratie van social media plug-ins met deze website zoals bijvoorbeeld YouTube.</span>
+                    </label>
+                </li>
+            </ul>    
+        </div>
+        <div class="diginaut-cb-actions">
+            <button data-diginaut-cb-button data-diginaut-cb-confirm class="diginaut-cb-button diginaut-cb-button-confirm" type="button">Keuze bevestigen</button>
+            <button data-diginaut-cb-button data-diginaut-cb-reject class="diginaut-cb-button diginaut-cb-button-deny" type="button">Weigeren</button>
+            <button data-diginaut-cb-button data-diginaut-cb-accept class="diginaut-cb-button diginaut-cb-button-allow" type="button">Aanvaarden</button>
+        </div>
+    </div>
+</div>
+<style>
+    :root {
+        --cb-black:         #{{settings.colorBlack}};
+        --cb-white:         #{{settings.colorWhite}};
+        --cb-text-tiny:     #{{settings.colorTextTiny}};
+        --cb-checkbox:      #{{settings.colorCheckbox}};
+        --cb-primary:       #{{settings.colorPrimary}};
+        --cb-primary-hover: #{{settings.colorPrimaryHover}};
+        --cb-success:       #{{settings.colorSuccess}};
+    }
+</style>
