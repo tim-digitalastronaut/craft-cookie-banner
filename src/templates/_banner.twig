@@ -10,9 +10,9 @@
                 <p class="diginaut-cb-text">{{ settings.bannerText|t|raw }}</p>
             {% endif %}
             <div class="diginaut-cb-moreInfo">
-                <button data-diginaut-cb-collapse type="button">Voorkeuren bepalen</button>
+                <button data-diginaut-cb-collapse type="button">{{'Voorkeuren bepalen'|t}}</button>
                 {% if settings.policyUrl %}
-                    <a href="{{ settings.policyUrl }}" title="Meer info">Meer info</a>
+                    <a href="{{ settings.policyUrl }}" title="{{'Meer info'|t}}">{{'Meer info'|t}}</a>
                 {% endif %}
             </div>
         </div>
@@ -21,44 +21,44 @@
                 <li class="diginaut-cb-typeItem diginaut-cb-typeItem-required">
                     <input data-diginaut-cb-option class="diginaut-cb-typeCheck" type="checkbox" name="cb-option" id="cb-option-essential" value="essential" checked required>
                     <label class="diginaut-cb-typeInfo diginaut-cb-typeInfo-required" for="cb-option-essential">
-                        <strong class="diginaut-cb-typeName">Essentiële cookies</strong> 
-                        <span class="diginaut-cb-typeText">Cookies die noodzakelijk zijn voor de normale werking van deze website. Deze kunnen niet gedeactiveerd worden.</span>
+                        <strong class="diginaut-cb-typeName">{{'Essentiële cookies'|t}}</strong> 
+                        <span class="diginaut-cb-typeText">{{'Cookies die noodzakelijk zijn voor de normale werking van deze website. Deze kunnen niet gedeactiveerd worden.'|t}}</span>
                     </label>
                 </li>
                 <li class="diginaut-cb-typeItem">
                     <input data-diginaut-cb-option class="diginaut-cb-typeCheck" type="checkbox" name="cb-option" id="cb-option-functional" value="functional">
                     <label class="diginaut-cb-typeInfo" for="cb-option-functional">
-                        <strong class="diginaut-cb-typeName">Functionele cookies</strong> 
-                        <span class="diginaut-cb-typeText">Cookies die de gebruiksvriendelijkheid van deze website verbeteren zoals bijvoorbeeld het bewaren van taalvoorkeuren.</span>
+                        <strong class="diginaut-cb-typeName">{{'Functionele cookies'|t}}</strong> 
+                        <span class="diginaut-cb-typeText">{{'Cookies die de gebruiksvriendelijkheid van deze website verbeteren zoals bijvoorbeeld het bewaren van taalvoorkeuren.'|t}}</span>
                     </label>
                 </li>
                 <li class="diginaut-cb-typeItem">
                     <input data-diginaut-cb-option class="diginaut-cb-typeCheck" type="checkbox" name="cb-option" id="cb-option-statistics" value="statistics">
                     <label class="diginaut-cb-typeInfo" for="cb-option-statistics">
-                        <strong class="diginaut-cb-typeName">Statistische cookies</strong> 
-                        <span class="diginaut-cb-typeText">Cookies die gebruikt worden om analyses van surfgedrag op deze website mogelijk te maken zodat de website verbeterd kan worden.</span>
+                        <strong class="diginaut-cb-typeName">{{'Statistische cookies'|t}}</strong> 
+                        <span class="diginaut-cb-typeText">{{'Cookies die gebruikt worden om analyses van surfgedrag op deze website mogelijk te maken zodat de website verbeterd kan worden.'|t}}</span>
                     </label>
                 </li>
                 <li class="diginaut-cb-typeItem">
                     <input data-diginaut-cb-option class="diginaut-cb-typeCheck" type="checkbox" name="cb-option" id="cb-option-marketing" value="marketing">
                     <label class="diginaut-cb-typeInfo" for="cb-option-marketing">
-                        <strong class="diginaut-cb-typeName">Marketing cookies</strong> 
-                        <span class="diginaut-cb-typeText">Cookies die het mogelijk maken om gepersonaliseerde advertenties weer te geven aan de hand van het surfgedrag op deze website.</span>
+                        <strong class="diginaut-cb-typeName">{{'Marketing cookies'|t}}</strong> 
+                        <span class="diginaut-cb-typeText">{{'Cookies die het mogelijk maken om gepersonaliseerde advertenties weer te geven aan de hand van het surfgedrag op deze website.'|t}}</span>
                     </label>
                 </li>
                 <li class="diginaut-cb-typeItem">
                     <input data-diginaut-cb-option class="diginaut-cb-typeCheck" type="checkbox" name="cb-option" id="cb-option-social" value="social">
                     <label class="diginaut-cb-typeInfo" for="cb-option-social">
-                        <strong class="diginaut-cb-typeName">Social media cookies</strong> 
-                        <span class="diginaut-cb-typeText">Cookies die nodig voor de integratie van social media plug-ins met deze website zoals bijvoorbeeld YouTube.</span>
+                        <strong class="diginaut-cb-typeName">{{'Social media cookies'|t}}</strong> 
+                        <span class="diginaut-cb-typeText">{{'Cookies die nodig voor de integratie van social media plug-ins met deze website zoals bijvoorbeeld YouTube.'|t}}</span>
                     </label>
                 </li>
             </ul>    
         </div>
         <div class="diginaut-cb-actions">
-            <button data-diginaut-cb-button data-diginaut-cb-confirm class="diginaut-cb-button diginaut-cb-button-confirm" type="button">Keuze bevestigen</button>
-            <button data-diginaut-cb-button data-diginaut-cb-reject class="diginaut-cb-button diginaut-cb-button-deny" type="button">Weigeren</button>
-            <button data-diginaut-cb-button data-diginaut-cb-accept class="diginaut-cb-button diginaut-cb-button-allow" type="button">Aanvaarden</button>
+            <button data-diginaut-cb-button data-diginaut-cb-confirm class="diginaut-cb-button diginaut-cb-button-confirm" type="button">{{'Keuze bevestigen'|t}}</button>
+            <button data-diginaut-cb-button data-diginaut-cb-reject class="diginaut-cb-button diginaut-cb-button-deny" type="button">{{'Weigeren'|t}}</button>
+            <button data-diginaut-cb-button data-diginaut-cb-accept class="diginaut-cb-button diginaut-cb-button-allow" type="button">{{'Aanvaarden'|t}}</button>
         </div>
     </div>
 </div>
